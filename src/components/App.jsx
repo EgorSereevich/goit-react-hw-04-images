@@ -6,7 +6,7 @@ import { Searchbar } from './Searchbar/Searchbar';
 import { ImageGallery } from './ImageGallery/ImageGallery';
 import { ToastContainer } from 'react-toastify';
 import { toast } from 'react-toastify';
-import { ImageGalleryItem } from './ImageGalleryItem/ImageGalleryItem';
+
 import 'react-toastify/dist/ReactToastify.css';
 import * as ImageService from './api-axios';
 export class App extends Component {
@@ -57,7 +57,7 @@ export class App extends Component {
       }
 
       this.setState(prev => ({
-        hits: [...prev.hits, ...hits],
+        hits: [...prev.hits, ...this.getNormalayzedImage(hits)],
         lastPage: this.state.page >= Math.ceil(total / 12),
       }));
     } catch (error) {
@@ -88,9 +88,7 @@ export class App extends Component {
         )}
         <Searchbar onSubmit={this.onSubmit} />
         {isLoading && <MutatingDots />}
-        <ImageGallery>
-          <ImageGalleryItem hits={hits} onClick={this.handleImageClick} />
-        </ImageGallery>
+        <ImageGallery hits={hits} onClick={this.handleImageClick} />
         {!lastPage && <Button onClick={this.handleClick} />}
       </div>
     );
