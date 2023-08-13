@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { async } from 'q';
+
 const API_KEY = '37771567-c63b0fa1e82728e8a21c21132';
 
 export const getImages = async ({ query, page }) => {
