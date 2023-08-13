@@ -2,7 +2,7 @@ import { React, Component } from 'react';
 import PropTypes from 'prop-types';
 export class ImageGalleryItem extends Component {
   render() {
-    const { id, webformatURL, tags, largeImageURL } = this.props;
+    const { webformatURL, tags, largeImageURL } = this.props;
     return (
       <li
         onClick={() => this.props.onClick(largeImageURL, tags)}
