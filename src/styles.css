@@ -21,7 +21,7 @@ body {
 }
 
 img {
-  display: block;
+  /* display: block; */
   max-width: 100%;
   height: auto;
 }
@@ -76,7 +76,7 @@ img {
   width: 48px;
   height: 48px;
   border: 0;
-  background-image: url('https://image.flaticon.com/icons/svg/149/149852.svg');
+  background-image: url(../public/free-icon-font-search-3917754.png);
   background-size: 40%;
   background-repeat: no-repeat;
   background-position: center;
@@ -123,7 +123,7 @@ img {
  */
 .ImageGallery {
   display: grid;
-  max-width: calc(100vw - 48px);
+  /* max-width: calc(100vw - 48px); */
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   grid-gap: 16px;
   margin-top: 0;
